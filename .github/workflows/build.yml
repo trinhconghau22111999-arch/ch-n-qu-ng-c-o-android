@@ -37,20 +37,34 @@ jobs:
           exit ${PIPESTATUS[0]}
 
       # Log build không đọc được qua trình duyệt log của GitHub (link log bị chặn tải tự động
-      # từ môi trường sandbox) -- lưu thẳng log vào repo (build-logs/last-build.log) để dễ đọc
-      # qua raw.githubusercontent.com. Dùng "[skip ci]" để commit này không tự kích hoạt build lại.
-      - name: Save build log to repo
+      # từ môi trường sandbox) -- lưu thẳng log vào repo (build-logs/last-build.log) qua GitHub
+      # Contents API (PUT 1 file, atomic) thay vì "git push" -- tránh hẳn xung đột khi có phiên
+      # khác đang push cùng lúc vào repo (từng làm "git push" âm thầm thất bại).
+      - name: Save build log to repo (via API)
         if: always()
         continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "gh-actions-bot"
-          git config user.email "actions@github.com"
-          mkdir -p build-logs
-          cp build.log build-logs/last-build.log
-          git add build-logs/last-build.log
-          git commit -m "chore: cập nhật build log [skip ci]" || echo "Không có gì thay đổi để commit"
-          git pull --rebase --autostash origin main || true
-          git push || echo "Push log thất bại (có thể do phiên khác đang push cùng lúc) - bỏ qua, không ảnh hưởng APK"
+          base64 -w0 build.log > /tmp/b64.txt
+          curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/contents/build-logs/last-build.log?ref=main" \
+            | python3 -c "import json,sys
+try:
+    print(json.load(sys.stdin).get('sha',''))
+except Exception:
+    print('')" > /tmp/sha.txt
+          python3 -c "
+import json
+sha = open('/tmp/sha.txt').read().strip()
+data = {'message': 'chore: cap nhat build log [skip ci]', 'content': open('/tmp/b64.txt').read().strip(), 'branch': 'main'}
+if sha:
+    data['sha'] = sha
+print(json.dumps(data))
+" > /tmp/body.json
+          curl -s -X PUT -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/contents/build-logs/last-build.log" \
+            -d @/tmp/body.json -w "\nHTTP_STATUS:%{http_code}\n"
 
       - name: Dừng job nếu build thật sự thất bại
         if: steps.build.outcome == 'failure'
