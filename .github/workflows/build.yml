@@ -41,6 +41,7 @@ jobs:
       # qua raw.githubusercontent.com. Dùng "[skip ci]" để commit này không tự kích hoạt build lại.
       - name: Save build log to repo
         if: always()
+        continue-on-error: true
         run: |
           git config user.name "gh-actions-bot"
           git config user.email "actions@github.com"
@@ -48,7 +49,8 @@ jobs:
           cp build.log build-logs/last-build.log
           git add build-logs/last-build.log
           git commit -m "chore: cập nhật build log [skip ci]" || echo "Không có gì thay đổi để commit"
-          git push
+          git pull --rebase --autostash origin main || true
+          git push || echo "Push log thất bại (có thể do phiên khác đang push cùng lúc) - bỏ qua, không ảnh hưởng APK"
 
       - name: Dừng job nếu build thật sự thất bại
         if: steps.build.outcome == 'failure'
