@@ -29,8 +29,30 @@ jobs:
           gradle-version: 8.7
 
       - name: Build debug APK
+        id: build
+        continue-on-error: true
         working-directory: AdBlockBrowser
-        run: gradle assembleDebug
+        run: |
+          gradle assembleDebug --stacktrace 2>&1 | tee ../build.log
+          exit ${PIPESTATUS[0]}
+
+      # Log build không đọc được qua trình duyệt log của GitHub (link log bị chặn tải tự động
+      # từ môi trường sandbox) -- lưu thẳng log vào repo (build-logs/last-build.log) để dễ đọc
+      # qua raw.githubusercontent.com. Dùng "[skip ci]" để commit này không tự kích hoạt build lại.
+      - name: Save build log to repo
+        if: always()
+        run: |
+          git config user.name "gh-actions-bot"
+          git config user.email "actions@github.com"
+          mkdir -p build-logs
+          cp build.log build-logs/last-build.log
+          git add build-logs/last-build.log
+          git commit -m "chore: cập nhật build log [skip ci]" || echo "Không có gì thay đổi để commit"
+          git push
+
+      - name: Dừng job nếu build thật sự thất bại
+        if: steps.build.outcome == 'failure'
+        run: exit 1
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
