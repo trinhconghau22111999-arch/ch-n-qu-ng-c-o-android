@@ -34,15 +34,13 @@ jobs:
       - name: Build debug APK
         id: build
         continue-on-error: true
+        shell: bash
         working-directory: AdBlockBrowser
         run: |
-          gradle assembleDebug --stacktrace 2>&1 | tee ../build.log
-          exit ${PIPESTATUS[0]}
+          set -o pipefail
+          gradle assembleDebug --no-daemon --stacktrace 2>&1 | tee ../build.log
+          echo "build_exit=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
 
-      # Log build không đọc được qua trình duyệt log của GitHub (link log bị chặn tải tự động
-      # từ môi trường sandbox) -- lưu thẳng log vào repo (build-logs/last-build.log) qua GitHub
-      # Contents API (PUT 1 file, atomic) thay vì "git push" -- tránh hẳn xung đột khi có phiên
-      # khác đang push cùng lúc vào repo (từng làm "git push" âm thầm thất bại).
       - name: Save build log to repo (via API)
         if: always()
         continue-on-error: true
@@ -55,8 +53,10 @@ jobs:
           curl -s -X PUT -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${{ github.repository }}/contents/build-logs/last-build.log" -d @/tmp/body.json -w "\nHTTP_STATUS:%{http_code}\n"
 
       - name: Dừng job nếu build thật sự thất bại
-        if: steps.build.outcome == 'failure'
-        run: exit 1
+        if: steps.build.outputs.build_exit != '0'
+        run: |
+          echo "Build failed with exit code ${{ steps.build.outputs.build_exit }}"
+          exit 1
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
