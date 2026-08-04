@@ -28,33 +28,24 @@ Daemon will be stopped at the end of the build
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
 > Task :app:javaPreCompileDebug
+> Task :app:processDebugManifestForPackage
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:desugarDebugFileDependencies
 > Task :app:compressDebugAssets
-> Task :app:mergeDebugStartupProfile
-> Task :app:mergeDebugJniLibFolders
-> Task :app:checkDebugDuplicateClasses
-> Task :app:mergeDebugNativeLibs
-> Task :app:mergeLibDexDebug
-
-> Task :app:stripDebugDebugSymbols
-Unable to strip the following libraries, packaging them as they are: libimage_processing_util_jni.so.
-
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
-> Task :app:writeDebugSigningConfigVersions
-> Task :app:processDebugManifestForPackage
 > Task :app:processDebugResources
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
+> Task :app:compileDebugKotlin
 > Task :app:mergeExtDexDebug
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:329:17 Unresolved reference: ViewGroup
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:329:54 Unresolved reference: ViewGroup
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:333:13 Unresolved reference: ViewGroup
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:333:50 Unresolved reference: ViewGroup
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:351:17 Unresolved reference: ViewGroup
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:351:54 Unresolved reference: ViewGroup
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:355:13 Unresolved reference: ViewGroup
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:355:50 Unresolved reference: ViewGroup
 
 FAILURE: Build failed with an exception.
 
@@ -263,5 +254,5 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 1m 30s
-32 actionable tasks: 32 executed
+BUILD FAILED in 1m 35s
+25 actionable tasks: 25 executed
