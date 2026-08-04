@@ -14,8 +14,8 @@ Daemon will be stopped at the end of the build
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:generateDebugResValues
+> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
 > Task :app:mergeDebugResources
@@ -35,20 +35,20 @@ Daemon will be stopped at the end of the build
 > Task :app:processDebugManifestForPackage
 > Task :app:desugarDebugFileDependencies
 > Task :app:compressDebugAssets
-> Task :app:mergeDebugStartupProfile
-> Task :app:mergeDebugJniLibFolders
-> Task :app:checkDebugDuplicateClasses
-> Task :app:mergeDebugNativeLibs
 > Task :app:processDebugResources
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
+> Task :app:compileDebugKotlin
 > Task :app:mergeExtDexDebug
+> Task :app:mergeDebugJniLibFolders
 > Task :app:mergeLibDexDebug
-
-> Task :app:stripDebugDebugSymbols
-Unable to strip the following libraries, packaging them as they are: libimage_processing_util_jni.so.
-
+> Task :app:mergeDebugNativeLibs
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libimage_processing_util_jni.so.
 
 > Task :app:compileDebugKotlin
 w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/FilesActivity.kt:286:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
@@ -68,7 +68,7 @@ w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBloc
       activity. Use
       {@link #registerForActivityResult(ActivityResultContract, ActivityResultCallback)}
       passing in a {@link StartActivityForResult} object for the {@link ActivityResultContract}.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:159:13 'startActivityForResult(Intent, Int): Unit' is deprecated. This method has been deprecated in favor of using the Activity Result API
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:163:13 'startActivityForResult(Intent, Int): Unit' is deprecated. This method has been deprecated in favor of using the Activity Result API
       which brings increased type safety via an {@link ActivityResultContract} and the prebuilt
       contracts for common intents available in
       {@link androidx.activity.result.contract.ActivityResultContracts}, provides hooks for
@@ -76,16 +76,16 @@ w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBloc
       activity. Use
       {@link #registerForActivityResult(ActivityResultContract, ActivityResultCallback)}
       passing in a {@link StartActivityForResult} object for the {@link ActivityResultContract}.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:412:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:651:23 'onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:416:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:655:23 'onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
       {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
       The OnBackPressedDispatcher controls how back button events are dispatched
       to one or more {@link OnBackPressedCallback} objects.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:656:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:36:21 'setter for isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:37:21 'buildDrawingCache(): Unit' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:38:31 'getter for drawingCache: Bitmap!' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:41:21 'setter for isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:660:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:37:21 'setter for isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:38:21 'buildDrawingCache(): Unit' is deprecated. Deprecated in Java
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:39:31 'getter for drawingCache: Bitmap!' is deprecated. Deprecated in Java
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:42:21 'setter for isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java
 w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:131:28 'constructor MediaRecorder()' is deprecated. Deprecated in Java
 w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:145:28 'constructor MediaRecorder()' is deprecated. Deprecated in Java
 w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:155:31 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
@@ -101,5 +101,5 @@ w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBloc
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 1m 49s
+BUILD SUCCESSFUL in 1m 36s
 40 actionable tasks: 40 executed
