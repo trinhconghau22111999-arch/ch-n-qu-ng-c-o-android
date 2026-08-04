@@ -14,8 +14,8 @@ Daemon will be stopped at the end of the build
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:generateDebugResValues
 > Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:generateDebugResValues
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
 > Task :app:mergeDebugResources
@@ -30,6 +30,7 @@ Daemon will be stopped at the end of the build
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
+> Task :app:processDebugManifestForPackage
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:desugarDebugFileDependencies
@@ -37,7 +38,6 @@ Daemon will be stopped at the end of the build
 > Task :app:mergeDebugStartupProfile
 > Task :app:mergeDebugJniLibFolders
 > Task :app:checkDebugDuplicateClasses
-> Task :app:processDebugManifestForPackage
 > Task :app:mergeDebugNativeLibs
 > Task :app:processDebugResources
 > Task :app:mergeExtDexDebug
@@ -92,8 +92,8 @@ w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBloc
       to one or more {@link OnBackPressedCallback} objects.
 w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:132:28 'constructor MediaRecorder()' is deprecated. Deprecated in Java
 w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:146:28 'constructor MediaRecorder()' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:156:31 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:157:33 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:157:31 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
+w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:158:33 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
 
 > Task :app:compileDebugJavaWithJavac
 > Task :app:dexBuilderDebug
@@ -105,5 +105,5 @@ w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBloc
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 1m 43s
+BUILD SUCCESSFUL in 1m 45s
 40 actionable tasks: 40 executed
