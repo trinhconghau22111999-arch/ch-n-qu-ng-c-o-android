@@ -17,33 +17,34 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 > Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
+> Task :app:mergeDebugResources
 > Task :app:parseDebugLocalResources
 > Task :app:checkDebugAarMetadata
+> Task :app:dataBindingGenBaseClassesDebug
 > Task :app:mapDebugSourceSetPaths
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
-> Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
-> Task :app:dataBindingGenBaseClassesDebug
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
-> Task :app:processDebugManifestForPackage
-> Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
-> Task :app:mergeDebugStartupProfile
-> Task :app:mergeDebugJniLibFolders
-> Task :app:checkDebugDuplicateClasses
+> Task :app:compressDebugAssets
 > Task :app:processDebugResources
-> Task :app:mergeDebugNativeLibs
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
 > Task :app:compileDebugKotlin
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:133:9 Unresolved reference: EdgeSwipePanel
-
 > Task :app:mergeExtDexDebug
+
 > Task :app:compileDebugKotlin FAILED
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/EdgeSwipePanel.kt:85:44 Unresolved reference: ic_mobile_mode
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/EdgeSwipePanel.kt:89:46 Unresolved reference: ic_translate
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/EdgeSwipePanel.kt:102:42 Unresolved reference: ic_desktop_mode
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/EdgeSwipePanel.kt:102:74 Unresolved reference: ic_mobile_mode
 
 FAILURE: Build failed with an exception.
 
@@ -252,5 +253,5 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 1m 15s
-27 actionable tasks: 27 executed
+BUILD FAILED in 1m 41s
+25 actionable tasks: 25 executed
