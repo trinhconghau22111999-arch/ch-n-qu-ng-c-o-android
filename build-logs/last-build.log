@@ -27,78 +27,401 @@ Daemon will be stopped at the end of the build
 > Task :app:extractDeepLinksDebug
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
-> Task :app:desugarDebugFileDependencies
 > Task :app:compressDebugAssets
-> Task :app:mergeDebugStartupProfile
-> Task :app:mergeDebugJniLibFolders
-> Task :app:checkDebugDuplicateClasses
-> Task :app:mergeDebugNativeLibs
-> Task :app:processDebugManifestForPackage
-> Task :app:mergeLibDexDebug
-
-> Task :app:stripDebugDebugSymbols
-Unable to strip the following libraries, packaging them as they are: libimage_processing_util_jni.so.
-
+> Task :app:desugarDebugFileDependencies
 > Task :app:processDebugResources
-> Task :app:mergeExtDexDebug
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
-> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
 > Task :app:compileDebugKotlin
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/FilesActivity.kt:286:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/FilesActivity.kt:295:19 'onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
-      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
-      The OnBackPressedDispatcher controls how back button events are dispatched
-      to one or more {@link OnBackPressedCallback} objects.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/GalleryActivity.kt:223:28 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:136:22 'setter for saveFormData: Boolean' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:293:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/LockScreenActivity.kt:119:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:113:13 'startActivityForResult(Intent, Int): Unit' is deprecated. This method has been deprecated in favor of using the Activity Result API
-      which brings increased type safety via an {@link ActivityResultContract} and the prebuilt
-      contracts for common intents available in
-      {@link androidx.activity.result.contract.ActivityResultContracts}, provides hooks for
-      testing, and allow receiving results in separate, testable classes independent from your
-      activity. Use
-      {@link #registerForActivityResult(ActivityResultContract, ActivityResultCallback)}
-      passing in a {@link StartActivityForResult} object for the {@link ActivityResultContract}.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:181:13 'startActivityForResult(Intent, Int): Unit' is deprecated. This method has been deprecated in favor of using the Activity Result API
-      which brings increased type safety via an {@link ActivityResultContract} and the prebuilt
-      contracts for common intents available in
-      {@link androidx.activity.result.contract.ActivityResultContracts}, provides hooks for
-      testing, and allow receiving results in separate, testable classes independent from your
-      activity. Use
-      {@link #registerForActivityResult(ActivityResultContract, ActivityResultCallback)}
-      passing in a {@link StartActivityForResult} object for the {@link ActivityResultContract}.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:447:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:706:23 'onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
-      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
-      The OnBackPressedDispatcher controls how back button events are dispatched
-      to one or more {@link OnBackPressedCallback} objects.
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:711:18 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:42:21 'setter for isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:43:21 'buildDrawingCache(): Unit' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:44:31 'getter for drawingCache: Bitmap!' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MultitaskManager.kt:47:21 'setter for isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:131:28 'constructor MediaRecorder()' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:145:28 'constructor MediaRecorder()' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:155:31 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
-w: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:156:33 'getter for adapterPosition: Int' is deprecated. Deprecated in Java
+> Task :app:mergeExtDexDebug
 
-> Task :app:compileDebugJavaWithJavac
-> Task :app:dexBuilderDebug
-> Task :app:mergeDebugGlobalSynthetics
-> Task :app:processDebugJavaRes
-> Task :app:mergeProjectDexDebug
-> Task :app:mergeDebugJavaResource
-> Task :app:packageDebug
-> Task :app:createDebugApkListingFileRedirect
-> Task :app:assembleDebug
+> Task :app:compileDebugKotlin FAILED
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/CalculatorActivity.kt:90:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/CalendarActivity.kt:124:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/CameraActivity.kt:174:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ClockActivity.kt:227:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/DocEditorActivity.kt:113:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/DocListActivity.kt:73:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/FilesActivity.kt:114:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/GalleryActivity.kt:101:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ImageViewerActivity.kt:74:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:109:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:9 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:16 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:21 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:22 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:40 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:41 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:54:43 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:93:21 Name expected
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:17 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:21 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:23 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:41 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:42 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:58 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:59 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:61 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:63 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:629:67 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:17 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:21 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:23 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:41 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:42 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:57 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:58 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:60 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:62 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:630:66 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:17 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:20 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:21 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:37 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:38 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:47 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:48 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:51 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:52 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:54 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:17 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:20 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:21 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:38 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:39 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:45 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:46 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:50 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:74 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:80 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:81 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:82 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:84 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:93 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:95 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:103 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:104 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:106 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:639:5 Expecting a top level declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:669:1 Expecting a top level declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:45:17 Unresolved reference: bar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:45:32 Unresolved reference: bar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:47:17 Unresolved reference: bar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:49:58 Unresolved reference: bar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:50:58 Unresolved reference: bar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:51:35 Unresolved reference: bar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:53:9 A 'return' expression required in a function with a block body ('{...}')
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:62:48 Unresolved reference: window
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:63:59 Unresolved reference: window
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:63:67 Unresolved reference: window
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:68:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:69:9 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:93:5 Modifier 'companion' is not applicable inside 'file'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:100:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:101:9 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:102:9 Unresolved reference: setContentView
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:107:36 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:108:13 Unresolved reference: startActivityForResult
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:108:43 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:108:82 Unresolved reference: REQ_LOCK
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:115:24 Unresolved reference: applicationContext
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:118:19 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:120:18 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:121:22 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:123:23 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:124:24 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:129:13 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:132:17 Unresolved reference: startActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:132:38 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:154:9 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:155:13 Unresolved reference: startActivityForResult
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:155:43 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:155:81 Unresolved reference: REQ_SHORTCUT
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:157:9 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:181:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:182:9 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:192:41 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:225:19 Unresolved reference: findViewById
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:230:13 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:246:57 Unresolved reference: packageName
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:248:21 Unresolved reference: startActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:250:21 Unresolved reference: startActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:274:47 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:277:47 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:277:74 Unresolved reference: REQ_PERMISSIONS
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:315:21 Unresolved reference: getSharedPreferences
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:318:50 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:321:24 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:321:32 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:321:40 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:321:48 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:324:32 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:329:46 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:335:46 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:357:50 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:385:44 Unresolved reference: dp
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:386:44 Unresolved reference: dp
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:398:24 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:403:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:404:9 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:405:28 Unresolved reference: REQ_LOCK
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:406:31 Unresolved reference: RESULT_OK
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:413:28 Unresolved reference: REQ_SHORTCUT
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:413:58 Unresolved reference: RESULT_OK
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:418:32 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:457:17 Unresolved reference: startActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:457:38 'this' is not defined in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:471:5 Modifier 'inner' is not applicable inside 'file'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:474:13 Unresolved reference: runOnUiThread
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:476:40 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:481:29 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:495:57 Unresolved reference: DOWNLOAD_FOLDER
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:497:30 Unresolved reference: getSystemService
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:497:47 Unresolved reference: DOWNLOAD_SERVICE
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:500:29 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:501:54 Unresolved reference: DOWNLOAD_FOLDER
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:505:40 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:556:25 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:559:29 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:564:29 Unresolved reference: @MainActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:610:25 Unresolved reference: startActivity
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:54 Conflicting overloads: public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:631:54 Function declaration must have a name
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:632:21 Unresolved reference: view
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:50 Conflicting overloads: public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:50 Function declaration must have a name
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:62 Unresolved reference: url
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:95 Conflicting overloads: public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:95 Function declaration must have a name
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:106 Conflicting overloads: public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`, public final fun `<no name provided>`(): Unit defined in com.h.adblockbrowser.setupWebView.`<no name provided>`
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:634:106 Function declaration must have a name
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:635:21 Unresolved reference: view
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:655:17 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:660:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:665:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MainActivity.kt:667:9 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/MediaPlayerActivity.kt:218:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/RecorderActivity.kt:88:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/SettingsActivity.kt:47:9 Unresolved reference: setContentViewWithNavBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/ShortcutsActivity.kt:128:9 Unresolved reference: setContentViewWithNavBar
 
-BUILD SUCCESSFUL in 2m 30s
-40 actionable tasks: 40 executed
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:336)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:319)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:324)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:67)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:45)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+	at org.gradle.internal.Either$Right.fold(Either.java:175)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:76)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:54)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:54)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:106)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:55)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
+	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:20)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:141)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:73)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+	... 2 more
+
+
+BUILD FAILED in 1m 42s
+25 actionable tasks: 25 executed
