@@ -14,8 +14,8 @@ Daemon will be stopped at the end of the build
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:generateDebugResValues
 > Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:generateDebugResValues
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
 > Task :app:mergeDebugResources
@@ -32,11 +32,11 @@ Daemon will be stopped at the end of the build
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
-> Task :app:desugarDebugFileDependencies
 > Task :app:compressDebugAssets
-> Task :app:mergeDebugStartupProfile
+> Task :app:desugarDebugFileDependencies
 > Task :app:processDebugManifestForPackage
 > Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
 > Task :app:processDebugResources
 > Task :app:mergeExtDexDebug
 > Task :app:mergeDebugJniLibFolders
@@ -49,230 +49,52 @@ Daemon will be stopped at the end of the build
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libimage_processing_util_jni.so.
 
-> Task :app:compileDebugKotlin
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:9 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:12 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:13 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:14 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:34 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:35 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:37 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:205:9 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:205:15 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:205:16 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:205:30 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:205:31 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:205:36 Expecting member declaration
+> Task :app:compileDebugKotlin FAILED
 e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:9 Expecting member declaration
 e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:15 Expecting member declaration
 e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:16 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:20 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:21 Expecting member declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:13 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:20 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:21 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:27 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:28 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:33 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:34 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:42 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:43 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:47 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:49 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:50 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:76 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:77 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:79 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:86 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:87 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:93 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:94 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:99 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:100 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:112 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:113 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:114 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:118 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:215:119 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:216:13 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:217:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:14 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:15 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:22 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:23 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:31 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:32 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:36 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:37 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:38 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:44 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:232:10 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:13 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:17 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:18 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:25 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:26 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:38 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:39 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:43 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:44 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:45 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:51 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:261:14 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:262:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:15 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:16 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:23 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:24 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:28 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:14 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:15 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:22 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:23 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:29 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:265:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:265:15 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:265:16 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:265:30 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:265:31 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:265:36 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:266:9 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:266:15 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:266:16 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:266:20 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:266:21 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:267:5 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:423:1 Expecting a top level declaration
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:200:37 Function declaration must have a name
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:202:76 Unresolved reference: url
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:218:41 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:219:34 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:222:24 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:222:31 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:222:39 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:222:46 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:44 Conflicting overloads: public fun `<no name provided>`(): Unit defined in com.h.adblockbrowser in file IncognitoActivity.kt, public fun `<no name provided>`(): Unit defined in com.h.adblockbrowser in file IncognitoActivity.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:44 Function declaration must have a name
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:225:13 Unresolved reference: textSize
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:226:13 Unresolved reference: setTextColor
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:227:13 Unresolved reference: setPadding
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:227:24 Unresolved reference: dp
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:227:32 Unresolved reference: dp
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:227:40 Unresolved reference: dp
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:227:48 Unresolved reference: dp
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:228:13 Unresolved reference: isClickable
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:229:13 Unresolved reference: setOnClickListener
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:233:48 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:234:91 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:236:33 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:51 Conflicting overloads: public fun `<no name provided>`(): Unit defined in com.h.adblockbrowser in file IncognitoActivity.kt, public fun `<no name provided>`(): Unit defined in com.h.adblockbrowser in file IncognitoActivity.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:237:51 Function declaration must have a name
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:238:17 Unresolved reference: orientation
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:239:17 Unresolved reference: gravity
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:240:17 Unresolved reference: isClickable
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:241:17 Unresolved reference: setOnClickListener
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:241:56 Unresolved reference: newTab
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:241:63 Unresolved reference: url
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:242:17 Unresolved reference: addView
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:242:38 Unresolved reference: @IncognitoActivity
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:243:28 Unresolved reference: url
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:248:32 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:248:40 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:248:48 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:248:55 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:251:17 Unresolved reference: addView
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:251:38 Unresolved reference: @IncognitoActivity
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:255:32 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:255:40 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:255:48 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:255:56 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:272:21 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:272:36 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:273:21 Unresolved reference: progressBar
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:273:33 Variable expected
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:274:21 Unresolved reference: progressBar
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:274:33 Variable expected
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:278:29 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:279:21 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:279:33 Variable expected
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:296:21 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:296:36 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:297:21 Unresolved reference: edtUrl
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:308:9 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:312:23 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:313:9 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:314:24 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:315:23 Variable expected
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:317:9 Unresolved reference: edtUrl
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:317:24 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:322:23 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:323:19 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:324:9 Unresolved reference: webContainer
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:326:13 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:330:44 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:336:9 Unresolved reference: tabBar
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:337:26 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:338:37 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:341:45 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:342:28 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:342:36 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:342:43 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:342:50 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:344:32 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:349:35 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:352:39 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:354:35 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:361:13 Unresolved reference: tabBar
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:363:9 Unresolved reference: tabBar
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:363:33 'this' is not defined in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:367:24 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:367:32 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:367:39 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:367:47 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
-public fun Activity.dp(v: Int): Int defined in com.h.adblockbrowser in file UiUtils.kt
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:369:34 Unresolved reference: newTab
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:374:21 Unresolved reference: edtUrl
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:380:9 Unresolved reference: programmaticLoad
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:381:19 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:386:9 Unresolved reference: finish
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:390:19 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:400:5 Modifier 'override' is not applicable to 'top level function'
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:401:9 No supertypes are accessible in this context
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:403:88 Unresolved reference: window
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:403:96 Unresolved reference: window
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:408:5 Modifier 'override' is not applicable to 'top level function'
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:409:23 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:409:38 Unresolved reference: activeIndex
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:411:13 Unresolved reference: programmaticLoad
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:418:5 Modifier 'override' is not applicable to 'top level function'
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:420:19 Unresolved reference: tabs
-e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:421:9 No supertypes are accessible in this context
-
-> Task :app:compileDebugKotlin FAILED
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:23 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:24 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:32 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:33 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:37 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:38 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:39 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:45 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:213:10 Expecting member declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:266:1 Expecting a top level declaration
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:154:9 Unresolved reference: setupWebViewCallbacks
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:156:9 Unresolved reference: switchTab
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:157:9 Unresolved reference: loadInTab
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:158:9 Unresolved reference: renderTabBar
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:197:13 Unresolved reference: cell
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:202:38 Unresolved reference: closeTab
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:202:47 Unresolved reference: i
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:204:28 Unresolved reference: cell
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:206:45 Function declaration must have a name
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:207:13 Unresolved reference: text
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:208:13 Unresolved reference: textSize
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:209:13 Unresolved reference: setTextColor
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:210:13 Unresolved reference: setPadding
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:211:13 Unresolved reference: isClickable
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:212:13 Unresolved reference: setOnClickListener
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:217:21 Unresolved reference: edtUrl
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:223:9 Unresolved reference: programmaticLoad
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:9 Unresolved reference: loadInTab
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:224:19 Unresolved reference: activeIndex
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:229:9 Unresolved reference: finish
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:233:19 Unresolved reference: tabs
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:243:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:244:9 No supertypes are accessible in this context
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:246:88 Unresolved reference: window
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:246:96 Unresolved reference: window
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:251:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:252:23 Unresolved reference: tabs
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:252:38 Unresolved reference: activeIndex
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:254:13 Unresolved reference: programmaticLoad
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:261:5 Modifier 'override' is not applicable to 'top level function'
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:263:19 Unresolved reference: tabs
+e: file:///home/runner/work/ch-n-qu-ng-c-o-android/ch-n-qu-ng-c-o-android/AdBlockBrowser/app/src/main/java/com/h/adblockbrowser/IncognitoActivity.kt:264:9 No supertypes are accessible in this context
 
 FAILURE: Build failed with an exception.
 
@@ -481,5 +303,5 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 1m 25s
+BUILD FAILED in 1m 31s
 32 actionable tasks: 32 executed
